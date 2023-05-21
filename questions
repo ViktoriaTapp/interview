@@ -1,1 +1,22 @@
+# What is git ?
+распределенная система управления версиями. Или же хранилище, база данных история разработки проекта
+is a distributed version control system that tracks changes in any set of computer files.
+# What the difference between merge and rebase ?
+Git Merge(Слияние) — принимает содержимое ветки источника и объединяет их с целевой веткой. В этом процессе изменяется только целевая ветка. История исходных веток остается неизменной.
+Объеденение с добавлением коммита. Сохранеяет полную историю и хронологию.
+Rebase сжимает все изменения в один «патч». Затем он интегрирует патч в целевую ветку. В отличие от слияния, перемещение перезаписывает историю, потому что она передает завершенную работу из одной ветки в другую. В процессе устраняется нежелательная история.
+Упрощает сложную историю, упрощение манипуляций с единственным коммитом.  Rebase allows you to integrate the changes from one branch into another. Merge logs show you the complete history of commit merging. Rebase logs are linear.
 
+# What branch strategies do you know ? Describe git flow branch strategy
+GitHub Flow, GitFlow, Forking Workflow.
+Git-flow — альтернативная модель ветвления Git, в которой используются функциональные ветки и несколько основных веток.
+Репозиторий содержит 2 главные ветки: master,develop
+master — дефолтная ветка. Параллельно в этой концепции существует еще одна ветка develop.
+Master в этой концепции всегда содержит стабильный код, а develop бранча существует для того чтобы от нее бранчеваться и сливать туда уже готовые фичи для последующего мержа в master. Как следствие master выступает релизной (иногда) и stable бранчей в этой концепции.
+GitFlow enables parallel development where developers can work separately from the master branch on features where a feature branch is created from the master branch.
+# Why do we need git ignore?
+The purpose of gitignore files is to ensure that certain files not tracked by Git remain untracked.
+gitignore нужен для скрытия файлов и папок от системы контроля версий Git.
+# Can we force push to master branch ?
+yes
+Git push — это консольная команда, которая передаёт в удалённый репозиторий изменения, сделанные в локальном репозитории. С помощью этой консольной команды разработчики дорабатывают основную ветку, добавляя новые фичи и внося исправления найденных багов и уязвимостей.
